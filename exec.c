@@ -42,9 +42,10 @@ int run(stack_t **stack, char *token, unsigned int line_number)
 	instruction_t func[] = {
 		{"push", &push},
 		{"pall", &pall},
+		{"pint", &pint},
 		{"null", NULL}
 	};
-	while (a < 3)
+	while (a < 4)
 	{
 		if (strcmp(token, func[a].opcode) == 0)
 		{
