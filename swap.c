@@ -3,7 +3,7 @@
 /**
  ** swap - A function that swaps the top two elements of a stack
  ** @stack: target stack
- ** @line_number: current line command is in
+ ** @line_number: current line command is on
  ** Return: Nothing
  **/
 void swap(stack_t **stack, unsigned int line_number)
