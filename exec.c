@@ -35,7 +35,7 @@ void exec(FILE *mfile)
  ** @line_number: line number of command
  ** Return: Exit success on success and exit failure on failure
  **/
-int run(stack_t **stack, char *token, unsigned int line_number)
+void run(stack_t **stack, char *token, unsigned int line_number)
 {
 	unsigned int a = 0;
 
@@ -47,20 +47,19 @@ int run(stack_t **stack, char *token, unsigned int line_number)
 		{"swap", swap},
 		{"add", add},
 		{"sub", sub},
-		{"null", NULL}
 	};
-	while (a < 8)
+	while (a < 7)
 	{
 		if (strcmp(token, func[a].opcode) == 0)
 		{
 			func[a].f(stack, line_number);
-			return (EXIT_SUCCESS);
+			return;
 		}
 		a++;
 	}
 	fprintf(stderr, "L%i: unknown instruction %s\n", line_number, token);
 	freeStack(stack);
-	return (EXIT_FAILURE);
+	exit(EXIT_FAILURE);
 }
 
 

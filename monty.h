@@ -39,7 +39,7 @@ typedef struct instruction_s
 
 int main(int argc, char **argv);
 void exec(FILE *mfile);
-int run(stack_t **stark, char *token, unsigned int line_number);
+void run(stack_t **stark, char *token, unsigned int line_number);
 void freeStack(stack_t **stack);
 void push(stack_t **stack, unsigned int line_number);
 int error(int message, unsigned int line_number);
