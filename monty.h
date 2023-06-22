@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -37,4 +38,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+int main(int argc, char **argv);
+void exec(FILE *mfile);
+int run(stack_t **stark, char *token, unsigned int line_number);
+void freeStack(stack_t **stack);
+void push(stack_t **stack, unsigned int line_number);
+int error(int message, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+void stack_push(stack_t **stack, int value);
 #endif
