@@ -3,7 +3,7 @@
 /**
  ** sub - A function that substracts the top two elements of a stack
  ** @stack: target stack
- ** @line_num: current line command is in
+ ** @line_number: current line command is on
  ** Return: Nothing
  **/
 void sub(stack_t **stack, unsigned int line_number)

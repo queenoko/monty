@@ -3,7 +3,7 @@
 /**
  ** add - A function that adds the top two elements of a stack
  ** @stack: target stack
- ** @line_num: current line command is in
+ ** @line_number: current line command is in
  ** Return: Nothing
  **/
 void add(stack_t **stack, unsigned int line_number)
