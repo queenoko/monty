@@ -43,9 +43,13 @@ int run(stack_t **stack, char *token, unsigned int line_number)
 		{"push", &push},
 		{"pall", &pall},
 		{"pint", &pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"sub", sub},
 		{"null", NULL}
 	};
-	while (a < 4)
+	while (a < 8)
 	{
 		if (strcmp(token, func[a].opcode) == 0)
 		{
