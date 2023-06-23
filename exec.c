@@ -19,7 +19,7 @@ void exec(FILE *mfile)
 	{
 		line_number++;
 		token = strtok(readline, " \t\r\n\a\"");
-		if (token == NULL)
+		if (token == NULL || token[0] == '#')
 			continue;
 		run(&stack, token, line_number);
 	}
@@ -48,8 +48,11 @@ void run(stack_t **stack, char *token, unsigned int line_number)
 		{"add", &add},
 		{"sub", &sub},
 		{"div", &divide},
+		{"mul", &mul},
+		{"mod", &mod},
+		{"pchar", &pchar}
 	};
-	while (a < 8)
+	while (a < 11)
 	{
 		if (strcmp(token, func[a].opcode) == 0)
 		{
