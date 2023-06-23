@@ -48,8 +48,9 @@ void run(stack_t **stack, char *token, unsigned int line_number)
 		{"add", &add},
 		{"sub", &sub},
 		{"div", &divide},
+		{"mul", mul},
 	};
-	while (a < 8)
+	while (a < 9)
 	{
 		if (strcmp(token, func[a].opcode) == 0)
 		{
