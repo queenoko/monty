@@ -53,9 +53,10 @@ void run(stack_t **stack, char *token, unsigned int line_number)
 		{"pchar", &pchar},
 		{"pstr", &pstr},
 		{"rotl", &rotl},
-		{"rotr", &rotr}
+		{"rotr", &rotr},
+		{"nop", &nop}
 	};
-	while (a < 14)
+	while (a < 15)
 	{
 		if (strcmp(token, func[a].opcode) == 0)
 		{
