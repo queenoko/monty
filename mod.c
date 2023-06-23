@@ -1,7 +1,8 @@
 #include "monty.h"
 
 /**
- ** mod - A function that computes the rest of the division of the top two elements of a stack
+ ** mod - A function that computes the rest of the division
+ ** of the top two elements of a stack
  ** @stack: target stack
  ** @line_number: current line command is in
  ** Return: Nothing
