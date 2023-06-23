@@ -19,7 +19,7 @@ void exec(FILE *mfile)
 	{
 		line_number++;
 		token = strtok(readline, " \t\r\n\a\"");
-		if (token == NULL)
+		if (token == NULL || token[0] == '#')
 			continue;
 		run(&stack, token, line_number);
 	}
