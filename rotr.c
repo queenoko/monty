@@ -13,7 +13,7 @@ void rotr(stack_t **stack, unsigned int line_number)
 
 	if (rotate && rotate->next)
 	{
-		while (rotate->next)
+		while (rotate->next != NULL)
 			rotate = rotate->next;
 		rotate->prev->next = NULL;
 		rotate->next = *stack;
