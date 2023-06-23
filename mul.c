@@ -17,6 +17,6 @@ void mul(stack_t **stack, unsigned int line_number)
 	}
 
 	multiple = (*stack)->next->n * (*stack)->n;
-	pop(stack, line_number);
 	(*stack)->next->n = multiple;
+	pop(stack, line_number);
 }
